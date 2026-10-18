@@ -26,8 +26,8 @@ Aplikasi web katalog buku sederhana yang dibuat menggunakan Express.js, pola MVC
 4. Buka `http://localhost:3000` di browser.
 
 ### Video Presentasi
-Tautan YouTube: *Tambahkan link video setelah diunggah.*
+Tautan YouTube: https://youtu.be/exEt9u75Np0?si=5ZeFIqPL6vzi51M5
 
 ### Repository
-https://github.com/Gus-putra/pemweb-tugas2-42530028
+Tautan GitHub: https://github.com/Gus-putra/pemweb-tugas2-42530028
 
