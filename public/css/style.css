@@ -4,11 +4,14 @@
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
-  color: #253047;
-  line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #253047;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -112,6 +115,11 @@ button {
   padding-bottom: 40px;
 }
 
+.empty-state {
+    width: min(1100px, 92%);
+    margin: 30px auto 40px;
+}
+
 .detail-card {
   margin-top: 20px;
 }
@@ -121,10 +129,7 @@ button {
   color: white;
   padding: 15px 0;
   text-align: center;
-}
-
-.empty-state {
-  margin: 25px 0;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
