@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | RuangBaca</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
+  <main class="container">
+    <section class="hero">
+      <h1>RuangBaca</h1>
+      <p>Temukan buku favoritmu di RuangBaca!</p>
+    </section>
+
+    <form action="/" method="GET" class="filter-form">
+      <input
+        type="search"
+        name="q"
+        placeholder="Cari judul atau penulis..."
+        value="<%= query %>"
+      >
+
+      <select name="category">
+        <option value="">Semua kategori</option>
+        <% categories.forEach((category) => { %>
+          <option
+            value="<%= category %>"
+            <%= selectedCategory === category ? 'selected' : '' %>
+          >
+            <%= category %>
+          </option>
+        <% }) %>
+      </select>
+
+      <button type="submit">Cari Buku</button>
+      <a href="/">Reset</a>
+    </form>
+
+    <h2>Daftar Buku</h2>
+    <p><%= books.length %> buku ditemukan.</p>
+
+    <% if (books.length > 0) { %>
+      <section class="book-grid">
+        <% books.forEach((book) => { %>
+          <article class="book-card">
+            <span class="category"><%= book.category %></span>
+            <h3><%= book.title %></h3>
+            <p>Penulis: <%= book.author %></p>
+            <p>Tahun terbit: <%= book.year %></p>
+            <a href="/books/<%= book.id %>">Lihat Detail</a>
+          </article>
+        <% }) %>
+      </section>
+    <% } else { %>
+      <section class="empty-state">
+        <h3>Buku tidak ditemukan</h3>
+        <p>Coba kata kunci atau kategori lainnya.</p>
+      </section>
+    <% } %>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>

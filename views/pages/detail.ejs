@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | RuangBaca</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
+  <main class="container detail-page">
+    <a href="/">← Kembali ke katalog</a>
+
+    <article class="detail-card">
+      <span class="category"><%= book.category %></span>
+      <h1><%= book.title %></h1>
+      <p>Penulis: <strong><%= book.author %></strong></p>
+      <p>Tahun terbit: <%= book.year %></p>
+
+      <h2>Tentang Buku</h2>
+      <p><%= book.description %></p>
+
+      <p>ID Buku: <%= book.id %></p>
+    </article>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>
